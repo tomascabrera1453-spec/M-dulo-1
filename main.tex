@@ -1,0 +1,200 @@
+%-------------------------
+% Currículum Vitae en LaTeX
+% Autor: TOMÁS CABRERA
+%------------------------
+
+\documentclass[letterpaper,11pt]{article}
+
+\usepackage{latexsym}
+\usepackage[empty]{fullpage}
+\usepackage{titlesec}
+\usepackage{marvosym}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{verbatim}
+\usepackage{enumitem}
+\usepackage[hidelinks]{hyperref}
+\usepackage{fancyhdr}
+\usepackage[spanish]{babel}
+\usepackage{tabularx}
+\usepackage{ragged2e} 
+
+% fontawesome
+\usepackage{fontawesome5}
+
+% fixed width
+\usepackage[scale=0.90,lf]{FiraMono}
+
+% colores
+\definecolor{light-grey}{gray}{0.83}
+\definecolor{dark-grey}{gray}{0.3}
+\definecolor{text-grey}{gray}{.08}
+
+\DeclareRobustCommand{\ebseries}{\fontseries{eb}\selectfont}
+\DeclareTextFontCommand{\texteb}{\ebseries}
+
+% subrayado personalizado
+\usepackage{contour}
+\usepackage[normalem]{ulem}
+\renewcommand{\ULdepth}{1.8pt}
+\contourlength{0.8pt}
+\newcommand{\myuline}[1]{%
+  \uline{\phantom{#1}}%
+  \llap{\contour{white}{#1}}%
+}
+
+% fuente sans-serif estilo helvetica
+\usepackage{tgheros}
+\renewcommand*\familydefault{\sfdefault}
+\usepackage[T1]{fontenc}
+
+\pagestyle{fancy}
+\fancyhf{}
+\fancyfoot{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+
+% Márgenes
+\addtolength{\oddsidemargin}{-0.5in}
+\addtolength{\evensidemargin}{0in}
+\addtolength{\textwidth}{1in}
+\addtolength{\topmargin}{-.5in}
+\addtolength{\textheight}{1.0in}
+
+\urlstyle{same}
+
+\raggedbottom
+\raggedright
+\setlength{\tabcolsep}{0in}
+
+% Formato de secciones
+\titleformat{\section}{
+    \bfseries \vspace{2pt} \raggedright \large
+}{}{0em}{}[\color{light-grey}{\titlerule[2pt]} \vspace{-4pt}]
+
+%-------------------------
+% Comandos personalizados
+\newcommand{\resumeItem}[1]{
+  \item\small{
+    {#1 \vspace{-1pt}}
+  }
+}
+
+\newcommand{\resumeSubheading}[4]{
+  \vspace{-1pt}\item
+    \begin{tabular*}{\textwidth}[t]{l@{\extracolsep{\fill}}r}
+      \textbf{#1} & {\color{dark-grey}\small #2}\vspace{1pt}\\
+      \textit{#3} & {\color{dark-grey} \small #4}\\
+    \end{tabular*}\vspace{-4pt}
+}
+
+\newcommand{\resumeSubSubheading}[2]{
+    \item
+    \begin{tabular*}{\textwidth}{l@{\extracolsep{\fill}}r}
+      \textit{\small#1} & \textit{\small #2} \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeProjectHeading}[2]{
+    \item
+    \begin{tabular*}{\textwidth}{l@{\extracolsep{\fill}}r}
+      #1 & {\color{dark-grey}\small #2} \\
+    \end{tabular*}\vspace{-4pt}
+}
+
+\newcommand{\resumeSubItem}[1]{\resumeItem{#1}\vspace{-4pt}}
+
+\renewcommand\labelitemii{$\vcenter{\hbox{\tiny$\bullet$}}$}
+
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=0in, label={}]}
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
+\newcommand{\resumeItemListStart}{\begin{itemize}}
+\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{0pt}}
+
+\color{text-grey}
+
+%-------------------------------------------
+%%%%%%  CURRÍCULUM  %%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{document}
+
+%----------ENCABEZADO----------
+\begin{center}
+    \textbf{\Huge TOMÁS CABRERA} \\ \vspace{5pt}
+    \small \faPhone* \texttt{2614191579} \hspace{1pt} $|$
+    \hspace{1pt} \faEnvelope \hspace{2pt} \texttt{tomascabrera1453@gmail.com} \hspace{1pt} $|$
+    \hspace{1pt} \faLinkedin \hspace{2pt} \href{https://www.linkedin.com/in/tomas-cabrera}{\texttt{Tomás Cabrera}} \hspace{1pt} $|$
+    \hspace{1pt} \faMapMarker* \hspace{2pt}\texttt{Mendoza, Argentina}
+    \\ \vspace{-3pt}
+\end{center}
+
+%-----------PERFIL-----------
+\section{PERFIL}
+\begin{justify}
+  \small{Estudiante de Ingeniería Industrial con especial interés en gestión de compras, abastecimiento y optimización de procesos productivos. Busco oportunidades que me permitan seguir formándome profesionalmente y aportar valor a entornos industriales y administrativos.}
+  \vspace{4pt}
+\end{justify}
+%-----------EXPERIENCIA LABORAL-----------
+\section{EXPERIENCIA LABORAL}
+  \resumeSubHeadingListStart
+
+    \resumeSubheading
+      {Chandon Argentina}{Feb. 2026 -- Presente}
+      {Pasante de Compras}{Mendoza, Argentina}
+      \resumeItemListStart
+        \resumeItem{Evaluación y alta de proveedores en el sistema de gestión de la empresa.}
+        \resumeItem{Generación y seguimiento de órdenes de compra en sistema \textbf{SAP}.}
+        \resumeItem{Apoyo en la gestión de compras y abastecimiento de insumos productivos.}
+        \resumeItem{Análisis comparativo de presupuestos y soporte en el desarrollo de proveedores.}
+      \resumeItemListEnd
+
+    \resumeSubheading
+      {FECOVITA}{Abr. 2025 -- Oct. 2025}
+      {Pasante de Compras}{Mendoza, Argentina}
+      \resumeItemListStart
+        \resumeItem{Apoyo en la gestión de compras y abastecimiento de insumos productivos.}
+        \resumeItem{Carga de órdenes y registros en sistema \textbf{JD Edwards (JDE)} y seguimiento de pedidos.}
+        \resumeItem{Análisis comparativo de presupuestos y soporte en evaluación y desarrollo de proveedores.}
+      \resumeItemListEnd
+
+  \resumeSubHeadingListEnd
+
+%-----------EDUCACIÓN-----------
+\section{EDUCACIÓN}
+  \resumeSubHeadingListStart
+    \resumeSubheading
+      {Universidad Nacional de Cuyo}{2020 -- Presente}
+      {Ingeniería Industrial \normalfont{(51,2\% de la carrera aprobado)}}{Mendoza, Argentina}
+  \resumeSubHeadingListEnd
+
+%-----------PROYECTOS Y VOLUNTARIADOS-----------
+\section{PROYECTOS Y VOLUNTARIADOS}
+    \resumeSubHeadingListStart
+
+      \resumeProjectHeading
+          {\textbf{Secretaría de Bienestar Universitario} $|$ \textit{UnCuyo}}{}
+          \resumeItemListStart
+            \resumeItem{Participante del programa de Voluntariado Universitario.}
+          \resumeItemListEnd
+
+      \resumeProjectHeading
+          {\textbf{Cátedra de Química Orgánica, FING} $|$ \textit{UnCuyo}}{}
+          \resumeItemListStart
+            \resumeItem{Voluntario en proyecto de creación de un curso de química orgánica orientado a la cocina.}
+            \resumeItem{Expositor en las 5° Jornadas sobre las Prácticas Docentes en la Universidad Pública: \textit{``La enseñanza en cuestión: preguntas sobre su condición transformadora''}.}
+            \resumeItem{Expositor en las 5° Jornadas de TIC e Innovación en el Aula (UNLP, 2025): \textit{``Aprender química con sabores: el caso del MOOC Química Orgánica para Foodies''}.}
+          \resumeItemListEnd
+
+    \resumeSubHeadingListEnd
+
+%-----------APTITUDES-----------
+\section{APTITUDES}
+ \begin{itemize}[leftmargin=0in, label={}]
+    \small{\item{
+     \textbf{Blandas}{: Trabajo en equipo $\cdot$ Comunicación clara y asertiva $\cdot$ Responsabilidad y compromiso con los objetivos $\cdot$ Pensamiento crítico}\vspace{4pt} \\
+     \textbf{Técnicas}{: Paquete Office avanzado $\cdot$ Microsoft Excel intermedio/avanzado $\cdot$ JD Edwards (JDE) intermedio $\cdot$ SAP intermedio}\vspace{4pt} \\
+     \textbf{Idiomas}{: Inglés B2}
+    }}
+ \end{itemize}
+
+%-------------------------------------------
+\end{document}
